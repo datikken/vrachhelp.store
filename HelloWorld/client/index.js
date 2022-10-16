@@ -14,7 +14,7 @@ navigator.mediaDevices.getUserMedia({
   addVideo(myvideo , stream);
   peer.on('call' , call=>{
     call.answer(stream);
-      const vid = document.createElement('video');
+    const vid = document.createElement('video');
     call.on('stream' , userStream=>{
       addVideo(vid , userStream);
     })
@@ -22,19 +22,21 @@ navigator.mediaDevices.getUserMedia({
       alert(err)
     })
     call.on("close", () => {
-        console.log(vid);
-        vid.remove();
+      console.log(vid);
+      vid.remove();
     })
     peerConnections[call.peer] = call;
   })
 }).catch(err=>{
-    alert(err.message)
+  console.log(err, 'getUserMedia')
+  alert(err.message)
 })
 peer.on('open' , (id)=>{
   myId = id;
   socket.emit("newUser" , id , roomID);
 })
 peer.on('error' , (err)=>{
+  console.log(err, 'peer')
   alert(err.type);
 });
 socket.on('userJoined' , id=>{
@@ -42,6 +44,7 @@ socket.on('userJoined' , id=>{
   const call  = peer.call(id , myVideoStream);
   const vid = document.createElement('video');
   call.on('error' , (err)=>{
+    console.log(err, 'userJoined')
     alert(err);
   })
   call.on('stream' , userStream=>{
