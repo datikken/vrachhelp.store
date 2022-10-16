@@ -1,0 +1,4 @@
+PassengerNodejs /home/t/tikken23/.local/bin/node
+PassengerAppRoot /home/t/tikken23/vrachhelp.store/HelloWorld
+PassengerAppType node
+PassengerStartupFile app.js
