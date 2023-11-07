@@ -1,11 +1,15 @@
 const socket = io('/');
 const peer = new Peer();
+
 let myVideoStream;
 let myId;
 var videoGrid = document.getElementById('videoDiv')
 var myvideo = document.createElement('video');
+
 myvideo.muted = true;
+
 const peerConnections = {}
+
 navigator.mediaDevices.getUserMedia({
   video:true,
   // audio:true
@@ -31,14 +35,17 @@ navigator.mediaDevices.getUserMedia({
   console.log(err, 'getUserMedia')
   alert(err.message)
 })
+
 peer.on('open' , (id)=>{
   myId = id;
   socket.emit("newUser" , id , roomID);
 })
+
 peer.on('error' , (err)=>{
   console.log(err, 'peer')
   alert(err.type);
 });
+
 socket.on('userJoined' , id=>{
   console.log("new user joined")
   const call  = peer.call(id , myVideoStream);
@@ -56,11 +63,13 @@ socket.on('userJoined' , id=>{
   })
   peerConnections[id] = call;
 })
+
 socket.on('userDisconnect' , id=>{
   if(peerConnections[id]){
     peerConnections[id].close();
   }
 })
+
 function addVideo(video , stream){
   video.srcObject = stream;
   video.addEventListener('loadedmetadata', () => {

@@ -5,18 +5,23 @@ const io = require('socket.io')(server);
 const port = process.env.PORT || 3000;
 const {v4:uuidv4} = require('uuid');
 const {ExpressPeerServer} = require('peer')
+
 const peer = ExpressPeerServer(server , {
   debug:true
 });
+
 app.use('/peerjs', peer);
-app.set('view engine', 'ejs')
+app.set('view engine', 'ejs');
+
 app.use(express.static('client'))
+
 app.get('/' , (req,res)=>{
   res.send(uuidv4());
 });
 app.get('/:room' , (req,res)=>{
   res.render('index' , {RoomId:req.params.room});
 });
+
 io.on("connection" , (socket)=>{
   socket.on('newUser' , (id , room)=>{
     socket.join(room);
@@ -26,6 +31,7 @@ io.on("connection" , (socket)=>{
     })
   })
 })
+
 server.listen(port , ()=>{
   console.log("Server running on port : " + port);
 });

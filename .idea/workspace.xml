@@ -2,10 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6dd414a0-27fc-4de0-b923-16415cc25de1" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ngrok" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld/client/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/HelloWorld/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/HelloWorld/views/index.ejs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/client/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/client/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/src/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/tmp/restart.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/tmp/restart.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/HelloWorld/views/index.ejs" beforeDir="false" afterPath="$PROJECT_DIR$/src/views/index.ejs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,7 +36,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/Users/nikitasadybekov/Sites/vrachhelp.store",
+    "last_opened_file_path": "/Users/macbookpro16/Documents/vrachhelp.store",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
@@ -53,6 +56,7 @@
       <option name="presentableId" value="Default" />
       <updated>1665943202962</updated>
       <workItem from="1665943204239" duration="322000" />
+      <workItem from="1699385817000" duration="159000" />
     </task>
     <servers />
   </component>
